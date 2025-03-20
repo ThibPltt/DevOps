@@ -3,27 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
+    <title>Carte - Localisation et Recherche</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Leaflet (Carte OpenStreetMap) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
     <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="content">
-            <h1>Bienvenue sur mon site</h1>
-            <p>Cliquez sur le bouton ci-dessous pour découvrir une autre page.</p>
-            <button id="navigateButton">Aller à la page suivante</button>
-        </section>
+        <h1>Carte Interactive</h1>
+
+        <!-- Barre de recherche -->
+        <div class="search-container">
+            <input type="text" id="citySearch" placeholder="Rechercher une ville en France">
+            <button id="searchButton">Rechercher</button>
+        </div>
+
+        <!-- Slider de distance -->
+        <div class="distance-container">
+            <label for="distanceRange">Rayon : </label>
+            <input type="range" id="distanceRange" min="1" max="10" value="5">
+            <span id="distanceValue">5</span> km
+        </div>
+
+        <!-- Conteneur de la carte -->
+        <div id="map"></div>
+
+        <!-- Bouton retour -->
+        <button id="backButton">Retour à l'accueil</button>
     </main>
 </body>
 </html>
