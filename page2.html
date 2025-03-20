@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside id="sidebar">
+            <h2>Réglage du périmètre</h2>
+            <label for="distanceRange">Rayon : <span id="distanceValue">1</span> km</label>
+            <input type="range" id="distanceRange" min="1" max="1000" step="0.5" value="1">
+            <button id="backButton">Retour</button>
+        </aside>
+        <section id="map-container">
+            <div id="map"></div>
+        </section>
+    </main>
+</body>
+</html>
